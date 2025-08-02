@@ -423,3 +423,48 @@ noBtn.addEventListener('click', moveNoBtn);
 
 // Hide all sections initially
 document.querySelectorAll('section').forEach(sec => sec.style.display = 'none');
+
+
+
+const paragraph = `Happy Friendship Day! 💛
+
+Soo it started when i met you on 11th Nov, dosti yuu badhi humari ki bs tu aur me, bs mai aur tuu, kehte hena dosti me who comes first nhi hota, isme hota who stays, and this is something we have with us, we enjoyy our space our time and energy , har tarah see, were comfortable and open with each other... wse to girlfriend day gelebrate krtee xD pr tm dostt hi achhi ho commitment ni chahie xDD but dost rhke v flirt to kruga tmsee, pyaar bhari baatien bhi krugaa, tmhari tareef v krluga and usse v jada mai tmhare sath rhuga hmeshaa, agr katam krna hotaa sab kch to easy tha ek aisa insan banke tmhe agr mil saku jo sath de and khushi ki wjh baneee toh soo ek gana ill dedicate to our frienshipp!!! My besan ka ladddooo`;
+
+const typedText = document.getElementById('typed-text');
+let i = 0;
+
+function typeWriter() {
+  if (i < paragraph.length) {
+    typedText.textContent += paragraph.charAt(i);
+    i++;
+    setTimeout(typeWriter, 40); // Adjust speed here
+  } else {
+    setTimeout(() => {
+      typedText.textContent = '';
+      i = 0;
+      typeWriter();
+    }, 1200); // Pause before restarting
+  }
+}
+
+window.addEventListener('DOMContentLoaded', typeWriter);
+
+// function createSparkleFriend() {
+function createSparkleHeart() {
+  const container = document.getElementById('sparkleFriendship');
+  if (!container) return;
+  const heart = document.createElement('div');
+  heart.className = 'sparkle-heart';
+  heart.textContent = '♥';
+  // random position around the edge (ellipse)
+  const angle = Math.random() * 2 * Math.PI;
+  const a = container.offsetWidth / 2 - 18; // horizontal radius
+  const b = container.offsetHeight / 2 - 18; // vertical radius
+  const x = Math.cos(angle) * a + container.offsetWidth / 2 - 11;
+  const y = Math.sin(angle) * b + container.offsetHeight / 2 - 11;
+  heart.style.left = x + 'px';
+  heart.style.top = y + 'px';
+  container.appendChild(heart);
+  setTimeout(() => heart.remove(), 1200);
+}
+setInterval(createSparkleHeart, 350);

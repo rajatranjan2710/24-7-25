@@ -92,6 +92,138 @@ body {
     width: 100%;
 }
 
+.section4{
+  position: relative;
+   background: linear-gradient(135deg, #ffe0ec 0%, #ffd6fa 100%);
+   display: flex;
+   flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+.contain{
+  display: flex;
+  height: 70vh;
+  /* justify-content: space-between; */
+  align-items: center;
+  width: 100%;
+  /* background-color: #d72660; */
+}
+
+
+.Happy-frienship{
+  margin: 2rem 0;
+  text-align: center;
+  color: var(--color-text-pink);
+  font-size: 30px;
+
+}
+
+/* .section4 { */
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+} */
+
+.left-photos {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.video-tilt {
+  width: 220px;
+  height: 320px;
+  overflow: hidden;
+  border-radius: 40px;
+  box-shadow:
+    0 8px 32px rgba(255,120,130,0.18),
+    0 2px 8px rgba(0,0,0,0.10),
+    0 0 0 8px #ffe0ec inset,
+    0 0 24px 8px #ffd6fa;
+  border: 4px solid #ffb6c1;
+  position: relative;
+  margin: 0 -10px;
+}
+
+
+
+.sparkle-heart {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 2;
+  font-size: 22px;
+  color: #ff3b6b;
+  text-shadow: 0 0 8px #fff, 0 0 16px #ff3b6b;
+  animation: sparkle-heart-grow 1.2s ease-out forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes sparkle-heart-grow {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(-20deg);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1.3) rotate(10deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8) rotate(0deg);
+  }
+}
+
+.video-sh {
+  transform: rotate(-7deg);
+  z-index: 10;
+}
+
+.video-ra {
+  transform: rotate(7deg);
+}
+
+.video-tilt video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.right-typo {
+  background: rgba(255,255,255,0.7);
+  border-radius: 18px;
+  box-shadow: 0 2px 8px rgba(255,120,130,0.10);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.1rem;           /* smaller text */
+  color: #ff6b81;
+  min-width: 440px;            /* bigger min width */
+  max-width: 700px;            /* bigger max width */
+  min-height: 320px;           /* bigger min height */
+  padding: 40px 50px;          /* more padding */
+}
+
+#typed-text {
+  border-right: 2px solid #ff6b81;
+  padding-right: 4px;
+  white-space: pre-line;
+  width: 100%;
+  font-size: 1.3rem;           /* smaller text */
+  line-height: 1.7;
+}
+
+
 /* video section */
 .duo-for{
   margin: 2rem 0;
